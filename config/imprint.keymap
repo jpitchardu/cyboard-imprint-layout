@@ -46,6 +46,21 @@
         };
     };
 
+    macros {
+        // Layer macros: send F13/F14/F15 indicator alongside layer activation
+        // The overlay app detects these to switch displayed layer
+        nav_mo: nav_mo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &mo 1 &kp F13>, <&macro_pause_for_release>, <&macro_release &mo 1 &kp F13>;
+        };
+        sym_mo: sym_mo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &mo 2 &kp F14>, <&macro_pause_for_release>, <&macro_release &mo 2 &kp F14>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -63,8 +78,8 @@
 &kp TAB     &hml LGUI A    &hml LALT S   &hml LCTRL D    &hml LSHFT F    &kp G                 &kp H    &hmr RSHFT J    &hmr RCTRL K    &hmr RALT L    &hmr RGUI SEMI   &kp SQT
 &mo 4       &kp Z          &kp X         &kp C           &kp V           &kp B                 &kp N    &kp M           &kp COMMA       &kp DOT        &kp FSLH         &kp MINUS
 &none       &none          &none         &none           &none                                           &none           &none           &none          &none            &none
-                                                          &kp RET         &mo 1      &kp DEL    &none    &kp BSPC        &kp SPACE
-                                                          &mo 2           &kp LSHFT  &none      &mo 3    &kp RSHFT       &kp ESC
+                                                          &kp RET         &nav_mo    &kp DEL    &none    &kp BSPC        &kp SPACE
+                                                          &sym_mo         &kp LSHFT  &none      &mo 3    &kp RSHFT       &kp ESC
             >;
         };
 
