@@ -63,8 +63,8 @@
         // │ Layer 0: Default                                        │
         // │                                                         │
         // │ Home row mods: hold = modifier, tap = letter            │
-        // │ Thumb: RET NAV DEL(hard) | ·(semi) BSPC SPACE          │
-        // │        SYM SHFT ·(semi)  | MO3(hard) SHFT ESC          │
+        // │ Thumb: RET NAV DEL(hard) | MB4 BSPC SPACE              │
+        // │        SYM SHFT MB5      | MO3(hard) SHFT ESC          │
         // └─────────────────────────────────────────────────────────┘
         default_layer {
             bindings = <
@@ -73,8 +73,8 @@
 &kp TAB     &hml LGUI A    &hml LALT S   &hml LCTRL D    &hml LSHFT F    &kp G                 &kp H    &hmr RSHFT J    &hmr RCTRL K    &hmr RALT L    &hmr RGUI SEMI   &kp SQT
 &mo 4       &kp Z          &kp X         &kp C           &kp V           &kp B                 &kp N    &kp M           &kp COMMA       &kp DOT        &kp FSLH         &kp MINUS
 &none       &none          &none         &none           &none                                           &none           &none           &none          &none            &none
-                                                          &kp RET         &mo 1      &kp DEL    &none    &kp BSPC        &kp SPACE
-                                                          &mo 2           &kp LSHFT  &none      &mo 3    &kp RSHFT       &kp ESC
+                                                          &kp RET         &mo 1      &kp DEL    &mkp MB4 &kp BSPC        &kp SPACE
+                                                          &mo 2           &kp LSHFT  &mkp MB5   &mo 3    &kp RSHFT       &kp ESC
             >;
         };
 
